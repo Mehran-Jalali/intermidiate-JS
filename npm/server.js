@@ -69,11 +69,19 @@ server.on("request", (req, res) => {
   if (url === "/create-post" && req.method === "POST") {
     //Receive the incoming data
     const post = [];
-    req.on("data", (chunck) => {
-      post.push(chunck).on("end", function () {
+    req
+      .on("data", (chunck) => {
+        console.log(chunck);
+        post.push(chunck);
+      })
+      .on("end", function () {
         //pass the buffer data into string
-        const parsedData = Buffer.concat(post).toString();
+        console.log(`real post is: ${post}`);
+        // const parsedData = Buffer.concat(post);
+        // console.log(`parsedData is: ${parsedData}`);
+        // res.writeHead(200, { "Content-Type": "text/json" });
+        res.write("post created");
+        res.end();
       });
-    });
   }
 });

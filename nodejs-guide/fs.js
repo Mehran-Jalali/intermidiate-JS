@@ -89,6 +89,6 @@ const fs = require("fs");
 // });
 
 //////////////////////////////////////////////////////////////////////
-// make a folder         mkdir("folderName", (err)=>{})
+// make a folder         mkdir("folderName", (err)=>{})  OR  mkdirSync("data", (err) => {}
 // read folder           readdir("targetFolder" , (err,folder)=>{})
 // delete folder         rmdir("targetFolder", (err)=>{})
