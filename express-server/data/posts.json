@@ -1,8 +1,20 @@
 [
   {
     "id": "2024",
-    "title": "html",
+    "title": "JavaScript",
     "url": "http://localhost:8080/posts",
-    "description": "the best express ever"
+    "description": "the best JavaScript course ever"
+  },
+  {
+    "id": "3",
+    "title": "python3",
+    "url": "http://localhost:8080/posts",
+    "description": "the best python3 course ever"
+  },
+  {
+    "id": "2",
+    "title": "nodeJS",
+    "url": "http://localhost:8080/posts",
+    "description": "the best node js course ever"
   }
 ]
