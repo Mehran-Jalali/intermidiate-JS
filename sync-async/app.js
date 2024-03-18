@@ -119,7 +119,7 @@ userPromise.then(function (valueFromResolve){
 //function returning a promise
 //------
 
-function getUser(){
+function getUser1(){
   return  new Promise((resolve, reject)=>{
         let user = {
             name: `Developer`,
@@ -133,12 +133,86 @@ function getUser(){
         }
     })
 }
-getUser().then((value)=>{
-    console.log((value))}).catch((err)=>{console.log(err)})
+getUser1().then((value)=>{console.log((value))}).catch((err)=>{console.log(err)})
 
 
 //consuming multiple promises
+//1. promise.all()
+//2. promise.race()
 
 // example ↓
 //1. fetch all post >> 10s
 //2. fetch all comments associated with a post >> 20s
+
+const postPromise = new Promise((resolve,reject)=>{
+    let isPostFetched = true
+    let posts = {
+        title: `title 1`,
+        desc : `Description 1`,
+        author : `Mumby Patirison`
+    }
+    if (isPostFetched) resolve(posts)
+    else reject(`error fetching post!! try later please`)
+})
+
+const commentPromise = new Promise((resolve,reject)=>{
+    let isCommentFetched = true
+    let comment = {
+        user: `comment 1`,
+        author : `Ali Hasani`
+    }
+    if (isCommentFetched) resolve(comment)
+    else reject(`error fetching comment!! try later`)
+})
+
+
+//1. promise.all()
+//*****if one of the promises is not fulfilled, all the promises are not fulfilled
+// Promise.all([postPromise,commentPromise]).then((value)=>{
+//     console.log(value[0])
+//     console.log(value[1])
+// }).catch((err)=>{
+//     console.log(err[0])
+//     console.log(err[1])
+// })
+
+//2. promise.race()
+Promise.race([postPromise,commentPromise]).then((data)=>{
+    console.log(data)
+}).catch((err)=>{
+    console.log(err)
+})
+
+
+// ================
+// 4. Async/Await   async function name(){
+// ================       const res = await makeAPIRequest() }
+// for getting results use try/catch to handel success and errors
+
+
+function fetchUser(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            isFetched = true
+            let user={
+                name : `Jimmy`,
+                city : `Miami`
+            }
+            if(isFetched) resolve(user)
+            else reject(`ERROR GETTING USER TRY LATER!`)
+        }, 7000)
+    })
+
+
+}
+async function getUser(){
+    //   try/catch (err)
+    try{
+        const respond = await fetchUser()
+        console.log(respond)
+    }catch (err){
+        console.log(err)
+    }
+}
+
+getUser()
