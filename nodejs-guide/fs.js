@@ -60,7 +60,7 @@ const fs = require("fs");
 
 //-----------------------------------------------------------------
 //truncate a file
-//append("targetFile", Numbers of charechters , function(err){})
+//truncate("targetFile", Numbers of charechters , function(err){})
 //-----------------------------------------------------------------
 
 // fs.truncate("source.html", 12, (err) => {
@@ -89,6 +89,6 @@ const fs = require("fs");
 // });
 
 //////////////////////////////////////////////////////////////////////
-// make a folder         mkdir("folderName", (err)=>{})
+// make a folder         mkdir("folderName", (err)=>{})  OR  mkdirSync("data", (err) => {}
 // read folder           readdir("targetFolder" , (err,folder)=>{})
 // delete folder         rmdir("targetFolder", (err)=>{})
