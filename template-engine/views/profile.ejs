@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>profile</title>
+  </head>
+  <body>
+    <!-- ******** how to connect another ejs file in partial directory -->
+    <%- include('./partials/nav.ejs') %>
+    <h1>profile</h1>
+    <!-- ******** how to use data from server or send data from backend to frontend -->
+    <h2>Welcome <%= user.name %></h2>
+    <hr />
+    <h2>Your age is : <%= user.age %></h2>
+    <hr />
+    <h2>Your city : <%= user.city %></h2>
+    <br />
+    <br />
+    <% if(user.isAdmin){ %>
+    <h2>You ara an admin</h2>
+    <% }else{ %>
+    <h2>You ara not an admin press the button below</h2>
+    <button>I want to be an admin</button>
+    <% } %>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit rerum, nulla
+      quo nisi iusto autem.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>posts</title>
+  </head>
+  <body>
+    <%- include('./partials/nav') %>
+    <h1>Numbers of available courses : <%= posts.length %></h1>
+    <hr />
+    <% posts.forEach((post)=>{ %>
+    <h5><%= post.title %></h5>
+    <h5><%= post.desc %></h5>
+    <hr />
+    <% }) %>
+  </body>
+</html>

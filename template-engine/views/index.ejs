@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>embeded javascript templating</title>
+  </head>
+  <body>
+    <!-- ******** how to connect another ejs file in partial directory -->
+    <%- include('./partials/nav.ejs') %>
+    <h1>Welcome Home Page</h1>
+    <p>Look the ejs file</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+      blanditiis.
+    </p>
+    <br />
+    <h1>Inject data</h1>
+    <h2>the score is : <%= 20 * 10 %></h2>
+    <br />
+    <h1>Write js codes</h1>
+    <% console.log('Welcome') %>
+    <br />
+    <h1>Looping</h1>
+
+    <h4>the programming languages which available :</h4>
+    <% ['Javascript','Python','C','Ruby','Java'].forEach(element => { %>
+    <li><%= element %></li>
+    <% }); %>
+    <br />
+    <h1>Make conditions</h1>
+    <h4>Is 20 > 10</h4>
+    <% if(20>10){ %>
+    <p>Yes it is</p>
+    <% }else{%>
+    <p>No it isn't</p>
+    <% }%>
+  </body>
+</html>
+
+<!-- from ejs.com documentations we learn how to  -->
+<!-- Inject data -->
+<!-- Write js codes -->
+<!-- Looping -->
+<!-- Make condition -->
