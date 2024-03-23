@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 //  we can set the name of database inside the string right after >> .mongodb.net/<DBname>?retryWrites=tr..
 mongoose
   .connect(
-    "mongodb+srv://mehranjalali7676:048wxpMgZAkL3CyJ@mongodb-demo.xlmspit.mongodb.net/academy?retryWrites=true&w=majority&appName=mongodb-demo"
+    "mongodb+srv://mehranjalali:<password>@mongodb-demo.xlmspit.mongodb.net/academy?retryWrites=true&w=majority&appName=mongodb-demo"
   )
   .then(() => {
     console.log("DB connected successfully☺");
