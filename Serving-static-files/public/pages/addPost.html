@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/form.css" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Add Post</h1>
+    <!-- this action means that where (localhost:3000/addPost) 
+      we wanna POST(so mehthod is POST) our data when we hit SUBMIT -->
+    <form action="/addPost" method="POST">
+      <!-- the 3names in this form are reffered to the req.body in server.js  -->
+      <input type="text" name="title" placeholder="Title" />
+      <input type="text" name="url" placeholder="Url" />
+      <textarea
+        cols="5"
+        rows="5"
+        name="body"
+        placeholder="Description"
+      ></textarea>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

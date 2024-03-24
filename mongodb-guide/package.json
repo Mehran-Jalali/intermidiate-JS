@@ -1,0 +1,15 @@
+{
+  "name": "mongodb-guide",
+  "version": "1.0.0",
+  "description": "working with mongodb ",
+  "main": "mongodb.js",
+  "scripts": {
+    "start": "node mongodb.js"
+  },
+  "author": "DevelopedByMehran",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.2.3"
+  }
+}
