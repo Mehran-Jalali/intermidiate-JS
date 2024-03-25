@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 **/mongoose-data-modelling/node_modules
 **/express-server/node_modules
 **/MiddleWare-express/node_modules
@@ -6,3 +7,11 @@
 **/mongodb-guide/mongoose-guide/node_modules
 **/template-engine/node_modules
 **/Serving-static-files/node_modules
+=======
+<<<<<<< HEAD
+**/express-server/node_modules
+**/MiddleWare-express/node_modules
+=======
+**/express-server/node_modules
+>>>>>>> 3075c151851da64d19ca1b79a7ee2ce7c748a925
+>>>>>>> b139ecbc3dc56dda636ccb4a1fc0a3ee59760311
