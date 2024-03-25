@@ -1,9 +1,6 @@
-<<<<<<< HEAD
+**/mongoose-data-modelling/node_modules
 **/express-server/node_modules
 **/MiddleWare-express/node_modules
-=======
-**/express-server/node_modules
->>>>>>> 3075c151851da64d19ca1b79a7ee2ce7c748a925
 **/mongodb-guide/node_modules
 **/mongodb-guide/node_modules
 **/mongodb-guide/mongoose-guide/node_modules

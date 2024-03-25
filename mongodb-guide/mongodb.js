@@ -5,7 +5,7 @@ const { MongoClient } = require("mongodb");
 
 //we create a variable called url
 const url =
-  "mongodb+srv://mehranjalali7676:<password>@mongodb-demo.xlmspit.mongodb.net/?retryWrites=true&w=majority&appName=mongodb-demo";
+  "mongodb+srv://mehranjalali:<password>@mongodb-demo.xlmspit.mongodb.net/?retryWrites=true&w=majority&appName=mongodb-demo";
 
 //now we need to create a new client for our data base and pass the url
 //==> new MongoClient(url)
