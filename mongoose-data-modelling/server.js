@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json()); //express Middleware
 
 app.use("/posts", postRouter);
-app.use("/users", postRouter);
+app.use("/users", userRouter);
 
 //listenning port
 

@@ -23,7 +23,11 @@ userRouter.post("/", async (req, res) => {
 userRouter.get("/", async (req, res) => {
   try {
     //find all documents in our model ==> modelName.find() promise
-    const users = await User.find();
+
+    //*** When we set the Schema as  type: mongoose.Schema.Types.ObjectId;  you need to fetch user
+    // by populate them / populate is used to convert all the IDes into normal object
+    //so you should say //find all documents in our model ==> modelName.find().populate('posts') promise in postRoute
+    const users = await User.find().populate("posts");
     res.json(users);
   } catch (err) {
     res.json({

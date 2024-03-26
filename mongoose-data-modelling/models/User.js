@@ -12,6 +12,17 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    //**CRUSIAL** now database relationships come
+    //we need to embedd posts id
+    // posts: Array,
+
+    posts: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        //referencing the exact name of the model in another collection
+        ref: "Post",
+      },
+    ],
   },
   { timestamps: true }
 );
