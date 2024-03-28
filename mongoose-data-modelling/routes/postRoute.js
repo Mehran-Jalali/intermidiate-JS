@@ -56,7 +56,7 @@ postRouter.get("/", async (req, res) => {
 
     // const posts = await Post.find().populate("author");
 
-    //or
+    //or to see the actual post in the author field: await Post.find().populate({path: "author",populate: {path: "posts",model: "Post",},
 
     const posts = await Post.find().populate({
       path: "author",

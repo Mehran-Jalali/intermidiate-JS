@@ -31,7 +31,7 @@ userRouter.get("/", async (req, res) => {
     res.json(users);
   } catch (err) {
     res.json({
-      message: err,
+      message: "err",
     });
   }
 });

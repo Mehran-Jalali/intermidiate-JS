@@ -24,8 +24,20 @@ const userSchema = new mongoose.Schema(
       },
     ],
   },
-  { timestamps: true }
+  //   { timestamps: true },
+  {
+    toJSON: {
+      virtuals: true,
+    },
+  }
 );
+
+//to find the total post which created by this user we should add ,{json{virtuals: true}} to the Schema and then↓
+
+userSchema.virtual("postCount").get(function () {
+  //this means the user properties
+  return this.posts.length;
+});
 
 //2. Model
 
